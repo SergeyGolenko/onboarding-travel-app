@@ -28,17 +28,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-Eq-zTb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="843.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="k9w-yS-Amq">
-                                                <rect key="frame" x="35" y="162" width="206" height="75"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="k9w-yS-Amq">
+                                                <rect key="frame" x="20" y="345.5" width="374" height="153"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Your Way" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz6-2v-aQa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="23"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Your Way" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOx-LX-bPP">
-                                                        <rect key="frame" x="0.0" y="49" width="206" height="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOx-LX-bPP">
+                                                        <rect key="frame" x="0.0" y="49" width="374" height="104"/>
+                                                        <string key="text">Travel Your Way trtrt erwew fds fd sfs f ef tttt   ewewf ef s f s df ewr g ds  vf we f we  wef we f d fs df  e trtrtrtrtrt  re e w e w ew  ew  e w e w r e re r e r  e r e  hhhhhhyyhyh    hyhyh</string>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -47,6 +48,12 @@
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="k9w-yS-Amq" secondAttribute="trailing" constant="20" id="CyN-xS-D5V"/>
+                                            <constraint firstItem="k9w-yS-Amq" firstAttribute="centerY" secondItem="KwJ-Eq-zTb" secondAttribute="centerY" id="Kxr-Og-m5z"/>
+                                            <constraint firstItem="k9w-yS-Amq" firstAttribute="centerX" secondItem="KwJ-Eq-zTb" secondAttribute="centerX" id="f6X-7m-fDQ"/>
+                                            <constraint firstItem="k9w-yS-Amq" firstAttribute="leading" secondItem="KwJ-Eq-zTb" secondAttribute="leading" constant="20" id="wbe-xZ-1dt"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,6 +80,13 @@
                             <constraint firstItem="yUm-rf-N9x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vww-EG-N0T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="Ws1-r9-EMA" id="LrA-Ir-5gk"/>
+                        <outlet property="darkView" destination="yUm-rf-N9x" id="nFc-BB-BXY"/>
+                        <outlet property="detailLabel" destination="AOx-LX-bPP" id="ugW-jy-Hnx"/>
+                        <outlet property="pageControll" destination="TUE-ac-Yf1" id="ZTx-U8-ABo"/>
+                        <outlet property="titleLabel" destination="dz6-2v-aQa" id="dvr-mt-nXG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
