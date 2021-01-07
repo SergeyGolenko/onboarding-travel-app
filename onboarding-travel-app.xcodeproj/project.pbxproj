@@ -13,6 +13,10 @@
 		2C7963C225A5F8E500B03019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963C025A5F8E500B03019 /* Main.storyboard */; };
 		2C7963C425A5F8E600B03019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963C325A5F8E600B03019 /* Assets.xcassets */; };
 		2C7963C725A5F8E600B03019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963C525A5F8E600B03019 /* LaunchScreen.storyboard */; };
+		2C7963D425A77F8700B03019 /* travel4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963D025A77F8700B03019 /* travel4.jpeg */; };
+		2C7963D525A77F8700B03019 /* travel1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963D125A77F8700B03019 /* travel1.jpeg */; };
+		2C7963D625A77F8700B03019 /* travel3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963D225A77F8700B03019 /* travel3.jpeg */; };
+		2C7963D725A77F8700B03019 /* travel2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7963D325A77F8700B03019 /* travel2.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2C7963C325A5F8E600B03019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7963C625A5F8E600B03019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C7963C825A5F8E600B03019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C7963D025A77F8700B03019 /* travel4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel4.jpeg; sourceTree = "<group>"; };
+		2C7963D125A77F8700B03019 /* travel1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel1.jpeg; sourceTree = "<group>"; };
+		2C7963D225A77F8700B03019 /* travel3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel3.jpeg; sourceTree = "<group>"; };
+		2C7963D325A77F8700B03019 /* travel2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel2.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,10 @@
 				2C7963BE25A5F8E500B03019 /* ViewController.swift */,
 				2C7963C025A5F8E500B03019 /* Main.storyboard */,
 				2C7963C325A5F8E600B03019 /* Assets.xcassets */,
+				2C7963D125A77F8700B03019 /* travel1.jpeg */,
+				2C7963D325A77F8700B03019 /* travel2.jpeg */,
+				2C7963D225A77F8700B03019 /* travel3.jpeg */,
+				2C7963D025A77F8700B03019 /* travel4.jpeg */,
 				2C7963C525A5F8E600B03019 /* LaunchScreen.storyboard */,
 				2C7963C825A5F8E600B03019 /* Info.plist */,
 			);
@@ -126,7 +138,11 @@
 			files = (
 				2C7963C725A5F8E600B03019 /* LaunchScreen.storyboard in Resources */,
 				2C7963C425A5F8E600B03019 /* Assets.xcassets in Resources */,
+				2C7963D525A77F8700B03019 /* travel1.jpeg in Resources */,
+				2C7963D425A77F8700B03019 /* travel4.jpeg in Resources */,
 				2C7963C225A5F8E500B03019 /* Main.storyboard in Resources */,
+				2C7963D725A77F8700B03019 /* travel2.jpeg in Resources */,
+				2C7963D625A77F8700B03019 /* travel3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
