@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     private var currentPage: Int = 0
     
-    private var items : [OnboardingItem] = [.init(title: "Travel Your Way", detail: "Travel the world by air, rail or sea at the most competitve prices", bgImage: nil),.init(title: "Stay Your Way", detail: "With over millions of hotels worldwide,find the perfect accomodation in the most amazing placed", bgImage: nil),.init(title: "Discover Your Way With New Feature", detail: "Explore exotic destinations with our new features that link you to like-minded travellers!", bgImage: nil),.init(title: "Feast Your Way", detail: "We recommend you local cuisines that are safe and highly recommended by the locals!", bgImage: nil)]
+    private var items : [OnboardingItem] = [.init(title: "Travel Your Way", detail: "Travel the world by air, rail or sea at the most competitve prices", bgImage: UIImage(named: "travel1")),.init(title: "Stay Your Way", detail: "With over millions of hotels worldwide,find the perfect accomodation in the most amazing placed", bgImage: UIImage(named: "travel2")),.init(title: "Discover Your Way With New Feature", detail: "Explore exotic destinations with our new features that link you to like-minded travellers!", bgImage:UIImage(named: "travel3")),.init(title: "Feast Your Way", detail: "We recommend you local cuisines that are safe and highly recommended by the locals!", bgImage:UIImage(named: "travel4"))]
     
     
     
@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     private func setupScreen(index:Int){
         titleLabel.text = items[index].title
         detailLabel.text = items[index].detail
+        bgImageView.image = items[index].bgImage
         pageControll.currentPage = index
         self.titleLabel.alpha = 1.0
         self.detailLabel.alpha = 1.0
@@ -73,8 +74,10 @@ class ViewController: UIViewController {
             window.rootViewController = mainAppViewController
             UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
-        
-        
+    }
+    
+    private func setupView(){
+        darkView.backgroundColor = UIColor.init(white: 0.1, alpha: 0.5)
     }
     
     
@@ -120,6 +123,7 @@ class ViewController: UIViewController {
         setupPageControl()
         setupScreen(index: currentPage)
         setupGestures()
+        setupView()
        
     }
 
