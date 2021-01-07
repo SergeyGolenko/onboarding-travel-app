@@ -62,6 +62,18 @@ class ViewController: UIViewController {
     private func setupGestures(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapAnimation))
         view.addGestureRecognizer(tap)
+    }
+    
+    private func mainApp(){
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "appMain")
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window{
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
+        
         
     }
     
@@ -91,8 +103,8 @@ class ViewController: UIViewController {
             }){ _ in
                 
                 if self.isOverLastItem(){
-                    self.currentPage = 0
-                    self.setupScreen(index: self.currentPage)
+                    self.mainApp()
+                
                 } else {
                     self.setupScreen(index: self.currentPage)
                 }
