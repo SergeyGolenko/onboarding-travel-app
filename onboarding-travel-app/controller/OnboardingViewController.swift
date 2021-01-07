@@ -7,22 +7,8 @@
 
 import UIKit
 
-
-
-struct OnboardingItem {
-    let title: String
-    let detail: String
-    let bgImage: UIImage?
-}
-
-
-
-class ViewController: UIViewController {
-    
-
-    
+class OnboardingViewController: UIViewController {
     //MARK: - Outlets
-    
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var pageControll: UIPageControl!
@@ -30,15 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var detailLabel: UILabel!
     
     //MARK: - variables
-    
-    
     private var currentPage: Int = 0
-    
-    private var items : [OnboardingItem] = [.init(title: "Travel Your Way", detail: "Travel the world by air, rail or sea at the most competitve prices", bgImage: UIImage(named: "travel1")),.init(title: "Stay Your Way", detail: "With over millions of hotels worldwide,find the perfect accomodation in the most amazing placed", bgImage: UIImage(named: "travel2")),.init(title: "Discover Your Way With New Feature", detail: "Explore exotic destinations with our new features that link you to like-minded travellers!", bgImage:UIImage(named: "travel3")),.init(title: "Feast Your Way", detail: "We recommend you local cuisines that are safe and highly recommended by the locals!", bgImage:UIImage(named: "travel4"))]
-    
-    
+    private var items : [OnboardingItem] = []
     
     //MARK: - functions
+    private func setupPlaceholderItems(){
+        items = OnboardingItem.placeholderItems
+    }
     
     private func isOverLastItem() -> Bool {
         return currentPage == self.items.count
@@ -67,7 +51,6 @@ class ViewController: UIViewController {
     
     private func mainApp(){
         let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "appMain")
-        
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let sceneDelegate = windowScene.delegate as? SceneDelegate,
            let window = sceneDelegate.window{
@@ -80,15 +63,12 @@ class ViewController: UIViewController {
         darkView.backgroundColor = UIColor.init(white: 0.1, alpha: 0.5)
     }
     
-    
     @objc private func handleTapAnimation(){
-        
         // first animation - title label
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut,animations: {
             self.titleLabel.alpha = 0.5
             self.titleLabel.transform = CGAffineTransform(translationX: -30, y: 0)
         }) { _ in
-            
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options:.curveEaseInOut,animations: {
                 self.titleLabel.alpha = 0
                 self.titleLabel.transform = CGAffineTransform(translationX: 0, y: -550)
@@ -110,23 +90,21 @@ class ViewController: UIViewController {
                 
                 } else {
                     self.setupScreen(index: self.currentPage)
-                }
+            }
         }
       }
     }
 
-
-    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPlaceholderItems()
         setupPageControl()
         setupScreen(index: currentPage)
         setupGestures()
         setupView()
-       
-    }
 
+    }
 
 }
 
